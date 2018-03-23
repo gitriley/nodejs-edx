@@ -1,34 +1,41 @@
 const fs = require('fs')
+const path = require('path')
 
-fs.readFile('customer-data.csv', 'utf8', (err, data) => {
-  if (err) throw err;
+const converter = (file) => {
 
-  // (/\n/) splits on a new line
-  let dataRows = data.split(/\n/)
+  fs.readFile(file, 'utf8', (err, data) => {
+    if (err) throw err;
 
-  //remove first row (header)
-  dataRows.shift()
+    // (/\n/) splits on a new line
+    let dataRows = data.split(/\n/)
 
-  // gets first row ((/\n/)[0]) and separates at each comma
-  const fields = data.split(/\n/)[0].split(',')
+    //remove first row (header)
+    dataRows.shift()
 
-
-  let theJSON = []
-
-  dataRows.forEach((row) => {
-  	let theObj = {};
-  	const rowItems = row.split(',')
-
-  	rowItems.forEach((item, i) => {
-  		theObj[fields[i]]  = item
-  	})
-
-  	theJSON.push(theObj)
-  })
+    // gets first row ((/\n/)[0]) and separates at each comma
+    const headerFields = data.split(/\n/)[0].split(',')
 
 
-  fs.writeFile('customer-data.json', JSON.stringify(theJSON), (err) => {
-  	if (err) throw err;
-  	console.log('The file has been saved!');
-	});
-});
+    let JSON_Output = []
+
+    dataRows.forEach((row) => {
+      let dataEntry = {};
+      const rowItems = row.split(',')
+
+      rowItems.forEach((item, i) => {
+        dataEntry[headerFields[i]]  = item
+      })
+
+      JSON_Output.push(dataEntry)
+    })
+
+    const JSONFileName = file.split('.')[0] + '.json'
+    fs.writeFile(JSONFileName, JSON.stringify(JSON_Output), (err) => {
+      if (err) throw err;
+      console.log('The file has been saved!');
+    });
+  });
+};
+
+converter(process.argv[2])
+
