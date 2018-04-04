@@ -1,0 +1,99 @@
+{
+  "posts": [
+    {
+      "name": "Top 10 ES6 Features every Web Developer must know",
+      "id": 0,
+      "url": "https://webapplog.com/es6",
+      "text": "This essay will give you a quick introduction to ES6. If you don’t know what is ES6, it’s a new JavaScript implementation.",
+      "comments": [
+        {
+          "text": "Cruel…..var { house, mouse} = No type optimization at all"
+        },
+        {
+          "text": "I think you’re undervaluing the benefit of ‘let’ and ‘const’."
+        },
+        {
+          "text": "(p1,p2)=>{ … } ,i understand this ,thank you !"
+        }
+      ]
+    },
+    {
+      "name": "Post 1",
+      "id": 1,
+      "url": "www.something.com/post1",
+      "text": "New post #1. This is a great new post"
+    },
+    null,
+    {
+      "name": "Updated Post 3",
+      "url": "www.something.com/post3",
+      "text": "Updating this post, which is post #3",
+      "id": "3",
+      "comments": [
+        {
+          "text": "Wow this blog is GREAT!"
+        },
+        {
+          "text": "Revising my opinion..."
+        },
+        {
+          "text": "Wow this blog is OK!"
+        }
+      ]
+    },
+    null,
+    {
+      "name": "Post 5",
+      "id": 5,
+      "url": "www.something.com/post5",
+      "text": "New post #5. This is a great new post"
+    },
+    {
+      "name": "Post 6",
+      "id": 6,
+      "url": "www.something.com/post6",
+      "text": "New post #6. This is a great new post",
+      "comments": [
+        {
+          "text": "Wow this blog is GREAT!"
+        },
+        {
+          "text": "Wow this blog is TERRIBLE!"
+        }
+      ]
+    },
+    {
+      "name": "Updated Post 7",
+      "url": "www.something.com/post7",
+      "text": "Updating this post, which is post #7",
+      "id": "7",
+      "comments": [
+        null,
+        {
+          "text": "Wow this blog is TERRIBLE!"
+        },
+        {
+          "text": "Wow this blog is OK!"
+        }
+      ]
+    },
+    {
+      "name": "Post 8",
+      "id": 8,
+      "url": "www.something.com/post8",
+      "text": "New post #8. This is a great new post"
+    },
+    {
+      "name": "Updated Post 9",
+      "url": "www.something.com/post9",
+      "text": "Updating this post, which is post #9",
+      "id": "9"
+    },
+    {
+      "name": "Post 10",
+      "id": 10,
+      "url": "www.something.com/post10",
+      "text": "New post #10. This is a great new post"
+    }
+  ]
+}
